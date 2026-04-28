@@ -1,382 +1,1393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Goutam Krapa portfolio - QA Engineer specializing in automation, full-stack testing, and hardware/system validation.">
-  <title>Goutam Krapa | QA Engineer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Goutam Krapa | QA Engineer Portfolio</title>
+  <meta name="description" content="QA Engineer portfolio focused on test automation, full-stack testing, API/database validation, system engineering, hardware validation, and embedded systems." />
+  <meta property="og:title" content="Goutam Krapa | QA Engineer Portfolio" />
+  <meta property="og:description" content="QA automation, full-stack testing, API/database validation, hardware validation, and systems engineering portfolio." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #071225;
-      --bg-deep: #050d1d;
-      --card: #0f1f3b;
-      --card-soft: #15284a;
-      --text: #eaf1ff;
-      --muted: #9db2d8;
-      --accent: #62c6ff;
-      --accent-strong: #2daff8;
-      --border: #264670;
-      --radius: 14px;
-      --shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+      --bg-main: #050816;
+      --bg-soft: #0b1120;
+      --bg-card: rgba(15, 23, 42, 0.78);
+      --bg-card-solid: #101827;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-soft: #cbd5e1;
+      --accent-blue: #38bdf8;
+      --accent-blue-dark: #0ea5e9;
+      --accent-gold: #fbbf24;
+      --border-soft: rgba(148, 163, 184, 0.22);
+      --shadow-blue: rgba(56, 189, 248, 0.18);
+      --shadow-dark: rgba(0, 0, 0, 0.45);
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --container: 1160px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      margin: 0;
-      font-family: "Segoe UI", "Inter", Arial, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #0a1a35 0%, var(--bg) 35%, var(--bg-deep) 100%);
-      line-height: 1.55;
+      font-family: "Montserrat", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(251, 191, 36, 0.08), transparent 28%),
+        linear-gradient(135deg, #020617 0%, #050816 45%, #0b1120 100%);
+      color: var(--text-main);
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    .container {
-      width: min(1060px, 92%);
-      margin: 0 auto;
-    }
-
-    .panel {
-      background: linear-gradient(180deg, var(--card) 0%, #0d1a34 100%);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.4rem;
-      margin: 1rem 0;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(5, 13, 29, 0.93);
-      border-bottom: 1px solid #1d3961;
-    }
-
-    .nav-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .7rem;
-      justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: .75rem 0;
-    }
-
-    .nav-list a {
-      color: var(--muted);
+    a {
+      color: inherit;
       text-decoration: none;
-      font-size: .95rem;
-      padding: .25rem .5rem;
-      border: 1px solid transparent;
-      border-radius: 8px;
-    }
-
-    .nav-list a:hover,
-    .nav-list a:focus-visible {
-      color: var(--accent);
-      border-color: #2a588f;
-      outline: none;
-    }
-
-    header {
-      padding: 2.4rem 0 1rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(1.9rem, 4vw, 2.8rem);
-      letter-spacing: .2px;
-    }
-
-    .headline {
-      margin: .45rem 0 .8rem;
-      color: var(--accent);
-      font-weight: 650;
-      font-size: clamp(1rem, 2.4vw, 1.25rem);
-    }
-
-    .hero-summary {
-      margin: 0;
-      color: var(--muted);
-      max-width: 780px;
-    }
-
-    h2 {
-      margin: 0 0 .8rem;
-      color: #a8ddff;
-      font-size: 1.2rem;
-    }
-
-    h3 {
-      margin: 0 0 .45rem;
-      font-size: 1.02rem;
-    }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .65rem;
-      margin-top: 1rem;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-      padding: .58rem .95rem;
-      border: 1px solid var(--accent-strong);
-    }
-
-    .btn.primary {
-      background: linear-gradient(180deg, #73d2ff 0%, #35b7f9 100%);
-      color: #051126;
-    }
-
-    .btn.secondary {
-      color: var(--accent);
-      background: transparent;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: .8rem;
-    }
-
-    .card {
-      background: var(--card-soft);
-      border: 1px solid var(--border);
-      border-radius: 11px;
-      padding: .95rem;
-    }
-
-    .entry {
-      background: var(--card-soft);
-      border: 1px solid var(--border);
-      border-radius: 11px;
-      padding: .95rem;
-      margin-bottom: .8rem;
     }
 
     ul {
-      margin: .3rem 0 0;
-      padding-left: 1.1rem;
+      list-style-position: inside;
     }
 
-    li { margin: .35rem 0; }
+    .container {
+      width: min(100% - 38px, var(--container));
+      margin: 0 auto;
+    }
 
-    .muted { color: var(--muted); }
+    .glass-morphism {
+      background: rgba(2, 6, 23, 0.72);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+    }
 
-    .contact-link {
-      color: var(--accent);
-      text-decoration: none;
-      word-break: break-all;
+    .preloader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-main);
+      display: grid;
+      place-items: center;
+      z-index: 9999;
+      transition: opacity 0.45s ease, visibility 0.45s ease;
+    }
+
+    .preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .preloader-spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(56, 189, 248, 0.25);
+      border-top-color: var(--accent-blue);
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(100% - 32px, 980px);
+      z-index: 1000;
+      border-radius: 999px;
+      padding: 11px 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      color: var(--text-main);
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-soft);
+      letter-spacing: 0.02em;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-blue);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      padding: 130px 20px 80px;
+      overflow: hidden;
+    }
+
+    #particleCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.18), transparent 65%);
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(12px);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 980px;
+    }
+
+    .hero-greeting {
+      color: var(--accent-gold);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(50px, 9vw, 104px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      margin-bottom: 18px;
+      text-shadow: 0 26px 80px rgba(56, 189, 248, 0.18);
+    }
+
+    .hero-typewriter {
+      min-height: 42px;
+      font-size: clamp(20px, 3vw, 34px);
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-bottom: 16px;
+    }
+
+    .typewriter-text::after {
+      content: "|";
+      color: var(--accent-gold);
+      animation: blink 0.85s infinite;
+      margin-left: 4px;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .hero-subtitle {
+      max-width: 780px;
+      margin: 0 auto;
+      color: var(--text-soft);
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .cta-button,
+    .resume-button {
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-dark));
+      color: #020617;
+      box-shadow: 0 16px 42px rgba(56, 189, 248, 0.22);
+    }
+
+    .resume-button {
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      background: rgba(15, 23, 42, 0.58);
+    }
+
+    .cta-button:hover,
+    .resume-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 48px rgba(56, 189, 248, 0.22);
+    }
+
+    .hero-location {
+      color: var(--text-muted);
+      margin-top: 24px;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 86px 0;
+      position: relative;
+    }
+
+    section h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 58px);
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: -0.035em;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 44px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .about-text {
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 24px 80px var(--shadow-dark);
+    }
+
+    .about-text p {
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-highlight {
+      color: var(--accent-blue);
+      font-weight: 700;
+    }
+
+    .about-image {
+      min-height: 320px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(56, 189, 248, 0.13), rgba(251, 191, 36, 0.08)),
+        rgba(15, 23, 42, 0.72);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 24px 80px var(--shadow-dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-image::before {
+      content: "QA";
+      position: absolute;
+      font-family: "Playfair Display", serif;
+      font-size: 132px;
+      font-weight: 900;
+      color: rgba(56, 189, 248, 0.09);
+      transform: rotate(-12deg);
+    }
+
+    .about-image .system-mark {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .system-mark span {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(2, 6, 23, 0.48);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      color: var(--text-soft);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      padding: 24px;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.26);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.45);
+    }
+
+    .skill-card h3 {
+      color: var(--accent-blue);
+      margin-bottom: 12px;
+      font-size: 17px;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-card li {
+      font-size: 12px;
+      color: var(--text-soft);
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      border-radius: 999px;
+      padding: 6px 10px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 24px 82px rgba(0, 0, 0, 0.34);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(56, 189, 248, 0.45);
+    }
+
+    .project-image {
+      min-height: 150px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at center, rgba(56, 189, 248, 0.2), transparent 48%),
+        linear-gradient(135deg, rgba(2, 6, 23, 0.95), rgba(15, 23, 42, 0.95));
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .project-icon {
+      font-size: 54px;
+      color: var(--accent-blue);
+      filter: drop-shadow(0 12px 28px rgba(56, 189, 248, 0.18));
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .project-content h3 {
+      font-size: 20px;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .project-live-badge {
+      white-space: nowrap;
+      color: #020617;
+      background: var(--accent-gold);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .project-description {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .project-content ul {
+      list-style-position: outside;
+      margin-left: 18px;
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .project-content li {
+      margin-bottom: 8px;
+    }
+
+    .project-tags,
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #bae6fd;
+      background: rgba(14, 165, 233, 0.11);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .timeline-container {
+      position: relative;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 24px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-blue), rgba(56, 189, 248, 0.08));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+      padding-left: 66px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 14px;
+      top: 24px;
+      width: 22px;
+      height: 22px;
+      background: var(--accent-blue);
+      border-radius: 50%;
+      box-shadow: 0 0 0 8px rgba(56, 189, 248, 0.12);
+    }
+
+    .timeline-content {
+      padding: 25px;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.26);
+    }
+
+    .timeline-content h4 {
+      color: var(--accent-gold);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 5px;
+    }
+
+    .timeline-role {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .timeline-content p,
+    .timeline-highlights {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .timeline-highlights {
+      list-style-position: outside;
+      margin: 12px 0 0 18px;
+    }
+
+    .timeline-highlights li {
+      margin-bottom: 7px;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .achievement-card {
+      padding: 24px;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.26);
+    }
+
+    .achievement-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent-blue);
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .achievement-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .achievement-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .contact-container {
+      width: min(100% - 38px, 820px);
+      margin: 0 auto;
+      text-align: center;
+      padding: 38px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 24px 82px rgba(0, 0, 0, 0.34);
+    }
+
+    .contact-heading {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 56px);
+      margin-bottom: 12px;
+    }
+
+    .contact-container p {
+      color: var(--text-soft);
+      margin-bottom: 24px;
+    }
+
+    .contact-actions,
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-link,
+    .social-icon {
+      border: 1px solid var(--border-soft);
+      background: rgba(15, 23, 42, 0.65);
+      color: var(--text-soft);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
     }
 
     .contact-link:hover,
-    .contact-link:focus-visible { text-decoration: underline; }
+    .social-icon:hover {
+      color: var(--accent-blue);
+      border-color: rgba(56, 189, 248, 0.55);
+      transform: translateY(-2px);
+    }
 
     footer {
       text-align: center;
-      color: var(--muted);
-      padding: 1rem 0 1.8rem;
-      font-size: .9rem;
+      padding: 28px 20px;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(148, 163, 184, 0.12);
+      background: rgba(2, 6, 23, 0.78);
     }
 
-    @media (max-width: 620px) {
-      .panel { padding: 1rem; }
-      .btn { width: 100%; text-align: center; }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+    .fade-in-up:nth-child(2) { animation-delay: 0.22s; }
+    .fade-in-up:nth-child(3) { animation-delay: 0.34s; }
+    .fade-in-up:nth-child(4) { animation-delay: 0.46s; }
+    .fade-in-up:nth-child(5) { animation-delay: 0.58s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .skills-container,
+      .projects-grid,
+      .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        top: 12px;
+        width: calc(100% - 24px);
+        border-radius: 18px;
+        justify-content: flex-end;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        padding: 14px 4px 4px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav.open .nav-links {
+        display: flex;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .cta-button,
+      .resume-button {
+        text-align: center;
+      }
+
+      .skills-container,
+      .projects-grid,
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        padding-left: 52px;
+      }
+
+      .timeline-line {
+        left: 18px;
+      }
+
+      .timeline-dot {
+        left: 8px;
+      }
+
+      .contact-container {
+        padding: 28px 20px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <nav>
-    <div class="container">
-      <ul class="nav-list">
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner"></div>
+  </div>
+
+  <nav class="glass-morphism" id="navbar">
+    <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">☰</button>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#timeline">Experience</a>
+      <a href="#achievements">Highlights</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <header>
-    <div class="container">
-      <section class="panel" aria-label="Hero">
-        <h1>Goutam Krapa</h1>
-        <p class="headline">QA Engineer | Full-Stack Testing | Hardware &amp; Systems Validation</p>
-        <p class="hero-summary">
-          QA Engineer experienced in automation, full-stack validation, and defect prevention for enterprise software and systems workflows.<br>
-          Delivers reliable releases through API/database validation, embedded test support, and disciplined engineering quality practices.
-        </p>
-        <div class="btn-row">
-          <a class="btn primary" href="#contact">Contact</a>
-          <!-- Upload resume files to /assets before publishing:
-               1) assets/Goutam_Krapa_Resume.pdf
-               2) assets/Goutam_Krapa_ATS_Resume.pdf -->
-          <a class="btn secondary" href="assets/Goutam_Krapa_Resume.pdf" download>Download Resume</a>
-          <a class="btn secondary" href="assets/Goutam_Krapa_ATS_Resume.pdf" download>ATS Resume PDF</a>
-        </div>
-      </section>
+  <section id="hero" class="hero">
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="hero-content">
+      <p class="hero-greeting fade-in-up">Hi, I'm</p>
+      <h1 class="hero-title fade-in-up">Goutam Krapa</h1>
+
+      <div class="hero-typewriter fade-in-up">
+        <span class="typewriter-text"></span>
+      </div>
+
+      <p class="hero-subtitle fade-in-up">
+        I validate enterprise software, APIs, data workflows, and system-level behavior across QA automation,
+        full-stack applications, and embedded/hardware projects.
+      </p>
+
+      <div class="hero-actions fade-in-up">
+        <a href="#contact" class="cta-button">Let's Connect</a>
+        <a href="assets/Goutam_Krapa_Resume.pdf" class="resume-button" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
+        <a href="assets/Goutam_Krapa_ATS_Resume.pdf" class="resume-button" target="_blank" rel="noopener noreferrer" download>ATS Resume PDF</a>
+      </div>
+
+      <p class="hero-location fade-in-up">📍 Houston, TX</p>
     </div>
-  </header>
+  </section>
 
-  <main class="container">
-    <section class="panel" aria-label="Value Cards">
-      <div class="grid-3">
-        <article class="card">
-          <h3>QA Automation</h3>
-          <p class="muted">Designs reliable automation suites for regression, integration, and release-gate coverage across business-critical flows.</p>
-        </article>
-        <article class="card">
-          <h3>Full-Stack Testing</h3>
-          <p class="muted">Validates UI, API, and database behavior end-to-end to reduce escaped defects and improve production confidence.</p>
-        </article>
-        <article class="card">
-          <h3>Systems &amp; Hardware Validation</h3>
-          <p class="muted">Supports embedded and hardware-adjacent verification with practical debugging, testbench workflows, and root-cause analysis.</p>
-        </article>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="section-subtitle">QA automation, full-stack validation, and system-level engineering</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a <span class="about-highlight">QA Engineer and Computer Engineering graduate</span> with 3+ years of experience
+            across SaaS, ERP, and enterprise systems.
+          </p>
+          <p>
+            My core work includes <span class="about-highlight">manual testing, automation testing, regression validation,
+            UAT, API/database validation, CI/CD support, and defect lifecycle management</span>.
+          </p>
+          <p>
+            I also bring full-stack application testing and hardware/system validation exposure through
+            <span class="about-highlight">embedded systems, RTL/FPGA lab support, testbench development, waveform analysis,
+            and computer architecture coursework</span>.
+          </p>
+        </div>
+
+        <div class="about-image" aria-label="QA engineering focus areas">
+          <div class="system-mark">
+            <span>QA Automation</span>
+            <span>API + Data Validation</span>
+            <span>Full-Stack Testing</span>
+            <span>Hardware/System Validation</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="summary" class="panel">
-      <h2>Summary</h2>
-      <p class="muted">Quality-focused engineer with experience in QA automation, full-stack application testing, API/data validation, and systems engineering. Works closely with development teams to turn requirements into measurable test coverage, accelerate feedback cycles, and improve release reliability.</p>
-    </section>
+  <section id="skills">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <p class="section-subtitle">Tools, frameworks, and systems I work with</p>
 
-    <section id="skills" class="panel">
-      <h2>Skills</h2>
-      <div class="grid-3">
-        <article class="card">
+      <div class="skills-container">
+        <div class="skill-card">
           <h3>Quality Engineering</h3>
-          <p class="muted">Test strategy, test planning, regression execution, defect lifecycle, release readiness.</p>
-        </article>
-        <article class="card">
-          <h3>Automation &amp; Frameworks</h3>
-          <p class="muted">Selenium, Playwright, Cucumber, TestNG, reusable test components, maintainable test design.</p>
-        </article>
-        <article class="card">
-          <h3>API, Data &amp; Backend Validation</h3>
-          <p class="muted">REST API testing, Postman, SQL queries, ETL validation, data integrity verification.</p>
-        </article>
-        <article class="card">
-          <h3>DevOps &amp; Tools</h3>
-          <p class="muted">Azure DevOps, Jenkins, Git, CI/CD quality checks, defect and test reporting workflows.</p>
-        </article>
-        <article class="card">
-          <h3>Programming</h3>
-          <p class="muted">Python, Java, SQL, Shell scripting for automation and diagnostics.</p>
-        </article>
-        <article class="card">
-          <h3>Systems &amp; Hardware</h3>
-          <p class="muted">Linux, embedded test support, FPGA/RTL lab workflows, electronics validation fundamentals.</p>
-        </article>
-      </div>
-    </section>
+          <ul>
+            <li>Manual Testing</li>
+            <li>Functional Testing</li>
+            <li>Regression Testing</li>
+            <li>Smoke/Sanity Testing</li>
+            <li>System Integration Testing</li>
+            <li>End-to-End Testing</li>
+            <li>UAT</li>
+            <li>Exploratory Testing</li>
+            <li>Risk-Based Testing</li>
+            <li>Test Planning</li>
+            <li>QA Documentation</li>
+            <li>Release Validation</li>
+          </ul>
+        </div>
 
-    <section id="experience" class="panel">
+        <div class="skill-card">
+          <h3>Automation & Frameworks</h3>
+          <ul>
+            <li>Selenium</li>
+            <li>Playwright</li>
+            <li>RSAT</li>
+            <li>Cucumber/BDD</li>
+            <li>TestNG</li>
+            <li>JUnit</li>
+            <li>Cypress</li>
+            <li>Page Object Model</li>
+            <li>Automation Framework Design</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>API, Data & Backend Validation</h3>
+          <ul>
+            <li>Postman</li>
+            <li>REST APIs</li>
+            <li>Rest Assured</li>
+            <li>SoapUI</li>
+            <li>SQL</li>
+            <li>Database Validation</li>
+            <li>ETL Validation</li>
+            <li>Data Integrity Testing</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>DevOps & Test Management</h3>
+          <ul>
+            <li>Azure DevOps</li>
+            <li>Azure Pipelines</li>
+            <li>Jenkins</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Jira</li>
+            <li>Maven</li>
+            <li>Gradle</li>
+            <li>CI/CD Test Execution</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Programming & Full Stack</h3>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>SQL</li>
+            <li>Shell Scripting</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Flask</li>
+            <li>Vue.js</li>
+            <li>Redis</li>
+            <li>Celery</li>
+            <li>SQLite</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Systems, Hardware & Embedded</h3>
+          <ul>
+            <li>Linux</li>
+            <li>Computer Architecture</li>
+            <li>RTL Design</li>
+            <li>FPGA Prototyping</li>
+            <li>Embedded Systems</li>
+            <li>Testbench Development</li>
+            <li>Waveform Analysis</li>
+            <li>I2C</li>
+            <li>SPI</li>
+            <li>UART</li>
+            <li>ESP32</li>
+            <li>Arduino</li>
+            <li>Raspberry Pi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <p class="section-subtitle">Implementation-focused projects across full-stack, QA automation, and embedded systems</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-icon">🧪</div>
+          </div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <h3>Quiz Master V2</h3>
+              <span class="project-live-badge">Full Stack</span>
+            </div>
+            <p class="project-description">
+              Full-stack role-based quiz platform with REST APIs, dashboards, background jobs, and database-driven workflows.
+            </p>
+            <ul>
+              <li>Implemented a Flask + Vue.js application with RBAC, REST APIs, SQLite schema design, Redis caching, Celery background jobs, and admin/user dashboards.</li>
+              <li>Validated authentication, API flows, database consistency, background task execution, and role-based access using functional, API, integration, and regression testing.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Flask</span>
+              <span class="tag">Vue.js</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Celery</span>
+              <span class="tag">RBAC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-icon">⚙️</div>
+          </div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <h3>QA Automation Framework PoC</h3>
+              <span class="project-live-badge">Automation</span>
+            </div>
+            <p class="project-description">
+              Enterprise regression automation framework built for Microsoft Dynamics 365 workflow validation.
+            </p>
+            <ul>
+              <li>Implemented a Selenium, Cucumber, and TestNG automation framework for Dynamics 365 regression scenarios using reusable test structure.</li>
+              <li>Integrated test execution with Azure DevOps pipelines and documented framework coverage, feasibility, and scalability for enterprise adoption.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Selenium</span>
+              <span class="tag">Cucumber</span>
+              <span class="tag">TestNG</span>
+              <span class="tag">Java</span>
+              <span class="tag">Azure DevOps</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-icon">☀️</div>
+          </div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <h3>IoT Smart Solar Monitoring</h3>
+              <span class="project-live-badge">Embedded</span>
+            </div>
+            <p class="project-description">
+              Embedded monitoring system for real-time voltage, current, and power measurement using sensor interfaces.
+            </p>
+            <ul>
+              <li>Built an ESP32 and Arduino-based monitoring system to capture voltage, current, and power metrics using sensor interfaces and embedded logic.</li>
+              <li>Validated sensor accuracy, serial communication, and hardware-software integration across I2C, SPI, and UART protocols.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">ESP32</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">Embedded C</span>
+              <span class="tag">Sensors</span>
+              <span class="tag">I2C</span>
+              <span class="tag">SPI</span>
+              <span class="tag">UART</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-icon">🏠</div>
+          </div>
+          <div class="project-content">
+            <div class="project-header-row">
+              <h3>Voice-Controlled Smart Home</h3>
+              <span class="project-live-badge">Systems</span>
+            </div>
+            <p class="project-description">
+              Raspberry Pi-based automation system integrating voice assistants, MQTT, REST APIs, and device control workflows.
+            </p>
+            <ul>
+              <li>Developed a Raspberry Pi-based automation system using Python, MQTT, REST APIs, and voice assistant integrations for remote device control.</li>
+              <li>Tested command execution, device state persistence, API communication, and failover behavior to improve automation reliability.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tag">Raspberry Pi</span>
+              <span class="tag">Python</span>
+              <span class="tag">MQTT</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Automation Testing</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="container">
       <h2>Experience</h2>
+      <p class="section-subtitle">Enterprise QA, automation, full-stack validation, and system-level engineering</p>
 
-      <article class="entry">
-        <h3>Tata Consultancy Services — System Engineer</h3>
-        <ul>
-          <li>Automated regression coverage for enterprise workflows, reducing manual effort by ~50% and improving repeatability.</li>
-          <li>Validated full-stack behavior across UI, API, and SQL layers for finance and operations modules used in production.</li>
-          <li>Partnered with developers on defect triage and root-cause analysis to maintain stable release quality.</li>
-        </ul>
-      </article>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
 
-      <article class="entry">
-        <h3>University of Houston-Clear Lake — Graduate Teaching Fellow</h3>
-        <ul>
-          <li>Supported embedded systems and digital design labs with testbench guidance, debugging support, and verification review.</li>
-          <li>Coached students on structured validation and failure analysis, improving lab quality and completion consistency.</li>
-        </ul>
-      </article>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Professional Experience</h4>
+            <strong class="timeline-role">System Engineer — Tata Consultancy Services</strong>
+            <p>India · Enterprise QA validation, automation framework development, release testing, and ERP workflow validation.</p>
+            <ul class="timeline-highlights">
+              <li>Owned QA validation for Microsoft Dynamics 365 F&O back-office modules including AP, AR, PO, PR, and GL, covering business-critical financial workflows.</li>
+              <li>Designed and executed smoke, functional, regression, integration, end-to-end, and UAT test cycles for enterprise ERP releases.</li>
+              <li>Built a BDD automation framework using Selenium, Cucumber, and TestNG, reducing manual regression effort by approximately 50%.</li>
+              <li>Integrated automated test execution with Azure DevOps pipelines to support repeatable CI/CD-based regression validation.</li>
+              <li>Validated backend data using SQL across integrations, services, and ETL flows to confirm transaction accuracy and data integrity.</li>
+              <li>Handled release validation, version upgrade testing, and production readiness checks with zero critical post-deployment defects.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Dynamics 365</span>
+              <span class="tag">Selenium</span>
+              <span class="tag">Cucumber</span>
+              <span class="tag">TestNG</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Azure DevOps</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">UAT</span>
+            </div>
+          </div>
+        </div>
 
-      <article class="entry">
-        <h3>Community Dreams Foundation — Electronics Design Engineer Volunteer</h3>
-        <ul>
-          <li>Contributed to electronics prototype validation with a focus on functional behavior, reliability, and practical testing.</li>
-          <li>Documented findings and recommendations to improve maintainability and reproducibility of engineering handoff.</li>
-        </ul>
-      </article>
-    </section>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Academic Engineering</h4>
+            <strong class="timeline-role">Graduate Teaching Fellow — University of Houston-Clear Lake</strong>
+            <p>Houston, TX · Computer architecture, RTL design, FPGA prototyping, embedded systems, and hardware validation labs.</p>
+            <ul class="timeline-highlights">
+              <li>Supported lab sessions covering computer architecture, RTL design, FPGA prototyping, embedded systems, and hardware validation workflows.</li>
+              <li>Guided students through testbench development, waveform analysis, functional verification, and debugging of digital systems.</li>
+              <li>Assisted in evaluating system behavior across hardware implementations, reinforcing structured validation and root-cause analysis practices.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Computer Architecture</span>
+              <span class="tag">RTL</span>
+              <span class="tag">FPGA</span>
+              <span class="tag">Embedded Systems</span>
+              <span class="tag">Testbench</span>
+              <span class="tag">Waveform Analysis</span>
+            </div>
+          </div>
+        </div>
 
-    <section id="projects" class="panel">
-      <h2>Projects</h2>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>Volunteer Engineering</h4>
+            <strong class="timeline-role">Electronics Design Engineer Volunteer — Community Dreams Foundation</strong>
+            <p>Remote · Electronic circuit design, prototyping, functional testing, reliability checks, and system-level debugging.</p>
+            <ul class="timeline-highlights">
+              <li>Designed, prototyped, and tested electronic circuits from requirements analysis through functional validation and implementation.</li>
+              <li>Performed reliability checks, system-level debugging, and corrective design updates to improve hardware stability.</li>
+              <li>Documented test procedures, validation results, and technical findings for future design reuse and project continuity.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Circuit Testing</span>
+              <span class="tag">System Debugging</span>
+              <span class="tag">Validation</span>
+              <span class="tag">Documentation</span>
+              <span class="tag">Reliability Testing</span>
+            </div>
+          </div>
+        </div>
 
-      <article class="entry">
-        <h3>Quiz Master V2</h3>
-        <ul>
-          <li>Built and validated a role-based full-stack quiz platform covering user flows, API behavior, and data consistency.</li>
-          <li>Added verification checks for scoring logic and asynchronous tasks to improve reliability under repeated usage.</li>
-        </ul>
-      </article>
+      </div>
+    </div>
+  </section>
 
-      <article class="entry">
-        <h3>QA Automation Framework PoC</h3>
-        <ul>
-          <li>Developed a reusable proof-of-concept automation framework for functional and regression test execution.</li>
-          <li>Integrated automated runs with CI pipelines and reporting to shorten feedback loops for defect response.</li>
-        </ul>
-      </article>
+  <section id="achievements">
+    <div class="container">
+      <h2>Highlights</h2>
+      <p class="section-subtitle">A few results that summarize my engineering direction</p>
 
-      <article class="entry">
-        <h3>IoT-Based Smart Solar Power Monitoring System</h3>
-        <ul>
-          <li>Implemented monitoring and validation flow for solar output and device health across sensor-driven data paths.</li>
-          <li>Tested threshold alerts and data capture behavior to improve trust in telemetry accuracy and fault detection.</li>
-        </ul>
-      </article>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">🧩</div>
+          <h3>QA Automation Impact</h3>
+          <p>Reduced manual regression effort by approximately 50% through Selenium/Cucumber/TestNG automation and reusable regression coverage.</p>
+        </div>
 
-      <article class="entry">
-        <h3>Voice-Controlled Smart Home Automation System</h3>
-        <ul>
-          <li>Engineered voice-command control workflows for connected devices with emphasis on robust command handling.</li>
-          <li>Validated integration and fallback scenarios to reduce command failures and improve overall control reliability.</li>
-        </ul>
-      </article>
-    </section>
+        <div class="achievement-card">
+          <div class="achievement-icon">🚀</div>
+          <h3>Release Quality</h3>
+          <p>Supported release validation and version upgrade testing with zero critical post-deployment defects across enterprise workflows.</p>
+        </div>
 
-    <section id="education" class="panel">
+        <div class="achievement-card">
+          <div class="achievement-icon">🔬</div>
+          <h3>Cross-Domain Engineering</h3>
+          <p>Combined QA automation, full-stack testing, API/database validation, and hardware/system validation across professional and academic work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
       <h2>Education</h2>
-      <div class="grid-3">
-        <article class="card">
-          <h3>MS Computer Engineering</h3>
-          <p class="muted">University of Houston-Clear Lake</p>
-        </article>
-        <article class="card">
-          <h3>Diploma in Data Science and Applications</h3>
-          <p class="muted">IIT Madras</p>
-        </article>
-        <article class="card">
-          <h3>B.Tech Electrical and Electronics Engineering</h3>
-          <p class="muted">VBIT</p>
-        </article>
-      </div>
-    </section>
+      <p class="section-subtitle">Computer engineering, data science, and electrical/electronics foundation</p>
 
-    <section id="contact" class="panel">
-      <h2>Contact</h2>
-      <p>Email: <a class="contact-link" href="mailto:goutam.krapa11@gmail.com">goutam.krapa11@gmail.com</a></p>
-      <p>LinkedIn: <a class="contact-link" href="https://www.linkedin.com/in/krapagoutam">linkedin.com/in/krapagoutam</a></p>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>Master of Science</h3>
+          <ul>
+            <li>Computer Engineering</li>
+            <li>University of Houston-Clear Lake</li>
+            <li>Houston, TX</li>
+          </ul>
+        </div>
 
-      <div class="btn-row">
-        <a class="btn primary" href="mailto:goutam.krapa11@gmail.com">Get in Touch</a>
-        <!-- Resume PDFs must exist at these relative paths for download buttons to work. -->
-        <a class="btn secondary" href="assets/Goutam_Krapa_Resume.pdf" download>Download Resume</a>
-        <a class="btn secondary" href="assets/Goutam_Krapa_ATS_Resume.pdf" download>ATS Resume PDF</a>
+        <div class="skill-card">
+          <h3>Diploma</h3>
+          <ul>
+            <li>Data Science and Applications</li>
+            <li>IIT Madras</li>
+            <li>Online Program</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Bachelor of Technology</h3>
+          <ul>
+            <li>Electrical and Electronics Engineering</li>
+            <li>VBIT</li>
+            <li>Hyderabad, India</li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-container">
+      <h2 class="contact-heading">Let's Connect</h2>
+      <p>
+        Open to QA Engineer, QA Automation Engineer, System Engineer, Test Analyst, and Software Engineering roles.
+      </p>
+
+      <div class="hero-actions">
+        <a href="mailto:goutam.krapa11@gmail.com?subject=Portfolio%20Contact" class="cta-button">Email Me</a>
+        <a href="assets/Goutam_Krapa_Resume.pdf" class="resume-button" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
+        <a href="assets/Goutam_Krapa_ATS_Resume.pdf" class="resume-button" target="_blank" rel="noopener noreferrer" download>ATS Resume PDF</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="mailto:goutam.krapa11@gmail.com" class="social-icon" aria-label="Email">Email</a>
+        <a href="tel:+13462220159" class="social-icon" aria-label="Phone">Phone</a>
+        <a href="https://www.linkedin.com/in/krapagoutam" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">© 2026 Goutam Krapa</div>
+    <p>&copy; 2026 Goutam Krapa. All rights reserved.</p>
   </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      setTimeout(() => preloader.classList.add("hidden"), 350);
+    });
+
+    const navToggle = document.getElementById("navToggle");
+    const navbar = document.getElementById("navbar");
+
+    navToggle.addEventListener("click", () => {
+      navbar.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navbar.classList.remove("open");
+      });
+    });
+
+    const roles = [
+      "QA Engineer",
+      "Test Automation Engineer",
+      "Full-Stack Testing",
+      "Hardware & Systems Validation",
+      "System Engineer"
+    ];
+
+    const typewriter = document.querySelector(".typewriter-text");
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeLoop() {
+      const current = roles[roleIndex];
+
+      if (!deleting) {
+        typewriter.textContent = current.slice(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(typeLoop, 1200);
+          return;
+        }
+      } else {
+        typewriter.textContent = current.slice(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+
+      setTimeout(typeLoop, deleting ? 42 : 72);
+    }
+
+    typeLoop();
+
+    const canvas = document.getElementById("particleCanvas");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      createParticles();
+    }
+
+    function createParticles() {
+      const count = Math.min(70, Math.floor(window.innerWidth / 18));
+      particles = Array.from({ length: count }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.8 + 0.5,
+        dx: (Math.random() - 0.5) * 0.35,
+        dy: (Math.random() - 0.5) * 0.35
+      }));
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((p, i) => {
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(56, 189, 248, 0.55)";
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          const q = particles[j];
+          const distance = Math.hypot(p.x - q.x, p.y - q.y);
+
+          if (distance < 115) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = `rgba(56, 189, 248, ${0.14 * (1 - distance / 115)})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      });
+
+      requestAnimationFrame(drawParticles);
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+    drawParticles();
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.animate(
+            [
+              { opacity: 0, transform: "translateY(24px)" },
+              { opacity: 1, transform: "translateY(0)" }
+            ],
+            {
+              duration: 650,
+              easing: "ease-out",
+              fill: "forwards"
+            }
+          );
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".skill-card, .project-card, .timeline-item, .achievement-card").forEach(el => {
+      el.style.opacity = 0;
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
