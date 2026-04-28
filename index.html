@@ -1,264 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goutam Krapa | QA Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Goutam Krapa portfolio - QA Engineer specializing in automation, full-stack testing, and hardware/system validation.">
+  <title>Goutam Krapa | QA Engineer</title>
+  <style>
+    :root {
+      --bg: #071225;
+      --bg-deep: #050d1d;
+      --card: #0f1f3b;
+      --card-soft: #15284a;
+      --text: #eaf1ff;
+      --muted: #9db2d8;
+      --accent: #62c6ff;
+      --accent-strong: #2daff8;
+      --border: #264670;
+      --radius: 14px;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    }
 
-<style>
-:root {
-  --bg:#0b1120;
-  --card:#111827;
-  --card2:#172033;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-  --accent:#38bdf8;
-  --border:#243244;
-}
+    * { box-sizing: border-box; }
 
-body {
-  margin:0;
-  font-family:Segoe UI, Arial;
-  background:var(--bg);
-  color:var(--text);
-}
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Inter", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #0a1a35 0%, var(--bg) 35%, var(--bg-deep) 100%);
+      line-height: 1.55;
+    }
 
-header {
-  padding:50px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#020617,#111827);
-}
+    .container {
+      width: min(1060px, 92%);
+      margin: 0 auto;
+    }
 
-header h1 { font-size:40px; margin:0; }
-header h2 { color:var(--accent); font-weight:600; margin:10px 0; }
+    .panel {
+      background: linear-gradient(180deg, var(--card) 0%, #0d1a34 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.4rem;
+      margin: 1rem 0;
+    }
 
-.contact {
-  margin-top:15px;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(5, 13, 29, 0.93);
+      border-bottom: 1px solid #1d3961;
+    }
 
-.contact a {
-  padding:8px 12px;
-  border:1px solid var(--border);
-  border-radius:999px;
-  text-decoration:none;
-  color:var(--accent);
-}
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: .75rem 0;
+    }
 
-nav {
-  background:#020617;
-  padding:12px;
-  text-align:center;
-  position:sticky;
-  top:0;
-}
+    .nav-list a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .95rem;
+      padding: .25rem .5rem;
+      border: 1px solid transparent;
+      border-radius: 8px;
+    }
 
-nav a {
-  margin:0 10px;
-  color:var(--text);
-  text-decoration:none;
-  font-weight:600;
-}
+    .nav-list a:hover,
+    .nav-list a:focus-visible {
+      color: var(--accent);
+      border-color: #2a588f;
+      outline: none;
+    }
 
-section {
-  max-width:1000px;
-  margin:25px auto;
-  padding:25px;
-  background:var(--card);
-  border-radius:12px;
-}
+    header {
+      padding: 2.4rem 0 1rem;
+    }
 
-h3 {
-  border-left:4px solid var(--accent);
-  padding-left:10px;
-}
+    h1 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      letter-spacing: .2px;
+    }
 
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-}
+    .headline {
+      margin: .45rem 0 .8rem;
+      color: var(--accent);
+      font-weight: 650;
+      font-size: clamp(1rem, 2.4vw, 1.25rem);
+    }
 
-.card {
-  background:var(--card2);
-  padding:15px;
-  border-radius:8px;
-}
+    .hero-summary {
+      margin: 0;
+      color: var(--muted);
+      max-width: 780px;
+    }
 
-.job, .project {
-  background:var(--card2);
-  padding:18px;
-  margin-bottom:15px;
-  border-radius:8px;
-}
+    h2 {
+      margin: 0 0 .8rem;
+      color: #a8ddff;
+      font-size: 1.2rem;
+    }
 
-.timeline { color:var(--muted); font-size:13px; }
+    h3 {
+      margin: 0 0 .45rem;
+      font-size: 1.02rem;
+    }
 
-ul { margin-left:20px; }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      margin-top: 1rem;
+    }
 
-.tag {
-  background:#0f3a4d;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:12px;
-  display:inline-block;
-  margin:4px;
-}
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+      padding: .58rem .95rem;
+      border: 1px solid var(--accent-strong);
+    }
 
-.resume-actions {
-  margin-top:15px;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-}
+    .btn.primary {
+      background: linear-gradient(180deg, #73d2ff 0%, #35b7f9 100%);
+      color: #051126;
+    }
 
-.button {
-  padding:10px 16px;
-  border-radius:999px;
-  background:var(--accent);
-  color:#000;
-  text-decoration:none;
-  font-weight:600;
-}
+    .btn.secondary {
+      color: var(--accent);
+      background: transparent;
+    }
 
-.button.secondary {
-  background:transparent;
-  color:var(--accent);
-  border:1px solid var(--accent);
-}
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: .8rem;
+    }
 
-footer {
-  text-align:center;
-  padding:20px;
-  background:#020617;
-}
+    .card {
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: .95rem;
+    }
 
-</style>
+    .entry {
+      background: var(--card-soft);
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: .95rem;
+      margin-bottom: .8rem;
+    }
+
+    ul {
+      margin: .3rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    li { margin: .35rem 0; }
+
+    .muted { color: var(--muted); }
+
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 1rem 0 1.8rem;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 620px) {
+      .panel { padding: 1rem; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
 </head>
-
 <body>
+  <nav>
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<script>
-const SHOW_TIMELINE = true;
-</script>
+  <header>
+    <div class="container">
+      <section class="panel" aria-label="Hero">
+        <h1>Goutam Krapa</h1>
+        <p class="headline">QA Engineer | Full-Stack Testing | Hardware &amp; Systems Validation</p>
+        <p class="hero-summary">
+          QA Engineer experienced in automation, full-stack validation, and defect prevention for enterprise software and systems workflows.<br>
+          Delivers reliable releases through API/database validation, embedded test support, and disciplined engineering quality practices.
+        </p>
+        <div class="btn-row">
+          <a class="btn primary" href="#contact">Contact</a>
+          <!-- Upload resume files to /assets before publishing:
+               1) assets/Goutam_Krapa_Resume.pdf
+               2) assets/Goutam_Krapa_ATS_Resume.pdf -->
+          <a class="btn secondary" href="assets/Goutam_Krapa_Resume.pdf" download>Download Resume</a>
+          <a class="btn secondary" href="assets/Goutam_Krapa_ATS_Resume.pdf" download>ATS Resume PDF</a>
+        </div>
+      </section>
+    </div>
+  </header>
 
-<header>
-<h1>Goutam Krapa</h1>
-<h2>QA Engineer | System Engineer | Test Automation</h2>
+  <main class="container">
+    <section class="panel" aria-label="Value Cards">
+      <div class="grid-3">
+        <article class="card">
+          <h3>QA Automation</h3>
+          <p class="muted">Designs reliable automation suites for regression, integration, and release-gate coverage across business-critical flows.</p>
+        </article>
+        <article class="card">
+          <h3>Full-Stack Testing</h3>
+          <p class="muted">Validates UI, API, and database behavior end-to-end to reduce escaped defects and improve production confidence.</p>
+        </article>
+        <article class="card">
+          <h3>Systems &amp; Hardware Validation</h3>
+          <p class="muted">Supports embedded and hardware-adjacent verification with practical debugging, testbench workflows, and root-cause analysis.</p>
+        </article>
+      </div>
+    </section>
 
-<div class="contact">
-  <a href="mailto:goutam.krapa11@gmail.com">Email</a>
-  <a href="tel:+13462220159">Phone</a>
-  <a href="https://linkedin.com/in/krapagoutam">LinkedIn</a>
-  <a href="assets/Goutam_Krapa_Resume.pdf" download>Resume</a>
-  <a href="assets/Goutam_Krapa_ATS_Resume.pdf" download>ATS PDF</a>
-</div>
-</header>
+    <section id="summary" class="panel">
+      <h2>Summary</h2>
+      <p class="muted">Quality-focused engineer with experience in QA automation, full-stack application testing, API/data validation, and systems engineering. Works closely with development teams to turn requirements into measurable test coverage, accelerate feedback cycles, and improve release reliability.</p>
+    </section>
 
-<nav>
-<a href="#summary">Summary</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+    <section id="skills" class="panel">
+      <h2>Skills</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Quality Engineering</h3>
+          <p class="muted">Test strategy, test planning, regression execution, defect lifecycle, release readiness.</p>
+        </article>
+        <article class="card">
+          <h3>Automation &amp; Frameworks</h3>
+          <p class="muted">Selenium, Playwright, Cucumber, TestNG, reusable test components, maintainable test design.</p>
+        </article>
+        <article class="card">
+          <h3>API, Data &amp; Backend Validation</h3>
+          <p class="muted">REST API testing, Postman, SQL queries, ETL validation, data integrity verification.</p>
+        </article>
+        <article class="card">
+          <h3>DevOps &amp; Tools</h3>
+          <p class="muted">Azure DevOps, Jenkins, Git, CI/CD quality checks, defect and test reporting workflows.</p>
+        </article>
+        <article class="card">
+          <h3>Programming</h3>
+          <p class="muted">Python, Java, SQL, Shell scripting for automation and diagnostics.</p>
+        </article>
+        <article class="card">
+          <h3>Systems &amp; Hardware</h3>
+          <p class="muted">Linux, embedded test support, FPGA/RTL lab workflows, electronics validation fundamentals.</p>
+        </article>
+      </div>
+    </section>
 
-<section id="summary">
-<h3>Professional Summary</h3>
-<p>
-QA Engineer with 3+ years experience in enterprise SaaS and ERP systems. 
-Specialized in automation frameworks, regression validation, API testing, 
-data validation, and CI/CD pipelines. Proven ability to improve release quality and reduce manual effort.
-</p>
-</section>
+    <section id="experience" class="panel">
+      <h2>Experience</h2>
 
-<section id="skills">
-<h3>Skills</h3>
+      <article class="entry">
+        <h3>Tata Consultancy Services — System Engineer</h3>
+        <ul>
+          <li>Automated regression coverage for enterprise workflows, reducing manual effort by ~50% and improving repeatability.</li>
+          <li>Validated full-stack behavior across UI, API, and SQL layers for finance and operations modules used in production.</li>
+          <li>Partnered with developers on defect triage and root-cause analysis to maintain stable release quality.</li>
+        </ul>
+      </article>
 
-<div class="grid">
-<div class="card"><b>Testing:</b> Functional, Regression, Integration, UAT, E2E</div>
-<div class="card"><b>Automation:</b> Selenium, Playwright, Cucumber, TestNG</div>
-<div class="card"><b>API & Data:</b> Postman, REST APIs, SQL, ETL Validation</div>
-<div class="card"><b>DevOps:</b> Azure DevOps, Jenkins, CI/CD, Git</div>
-<div class="card"><b>Programming:</b> Python, Java, SQL, Shell</div>
-<div class="card"><b>Systems:</b> Linux, Flask, Vue.js, Redis</div>
-</div>
+      <article class="entry">
+        <h3>University of Houston-Clear Lake — Graduate Teaching Fellow</h3>
+        <ul>
+          <li>Supported embedded systems and digital design labs with testbench guidance, debugging support, and verification review.</li>
+          <li>Coached students on structured validation and failure analysis, improving lab quality and completion consistency.</li>
+        </ul>
+      </article>
 
-</section>
+      <article class="entry">
+        <h3>Community Dreams Foundation — Electronics Design Engineer Volunteer</h3>
+        <ul>
+          <li>Contributed to electronics prototype validation with a focus on functional behavior, reliability, and practical testing.</li>
+          <li>Documented findings and recommendations to improve maintainability and reproducibility of engineering handoff.</li>
+        </ul>
+      </article>
+    </section>
 
-<section id="experience">
-<h3>Experience</h3>
+    <section id="projects" class="panel">
+      <h2>Projects</h2>
 
-<div class="job">
-<h4>System Engineer – TCS</h4>
-<div class="timeline">Feb 2021 – Aug 2023</div>
-<ul>
-<li>Led QA validation for Dynamics 365 financial modules ensuring workflow accuracy.</li>
-<li>Built Selenium + Cucumber automation reducing regression effort by ~50%.</li>
-<li>Executed regression and UAT cycles improving release stability.</li>
-<li>Validated backend data using SQL across integrations and ETL flows.</li>
-<li>Delivered zero critical production defects during release cycles.</li>
-</ul>
-</div>
+      <article class="entry">
+        <h3>Quiz Master V2</h3>
+        <ul>
+          <li>Built and validated a role-based full-stack quiz platform covering user flows, API behavior, and data consistency.</li>
+          <li>Added verification checks for scoring logic and asynchronous tasks to improve reliability under repeated usage.</li>
+        </ul>
+      </article>
 
-<div class="job">
-<h4>Graduate Teaching Fellow</h4>
-<div class="timeline">Jan 2024 – May 2025</div>
-<ul>
-<li>Supported FPGA, RTL, and embedded system validation labs.</li>
-<li>Guided testbench development and debugging workflows.</li>
-</ul>
-</div>
+      <article class="entry">
+        <h3>QA Automation Framework PoC</h3>
+        <ul>
+          <li>Developed a reusable proof-of-concept automation framework for functional and regression test execution.</li>
+          <li>Integrated automated runs with CI pipelines and reporting to shorten feedback loops for defect response.</li>
+        </ul>
+      </article>
 
-</section>
+      <article class="entry">
+        <h3>IoT-Based Smart Solar Power Monitoring System</h3>
+        <ul>
+          <li>Implemented monitoring and validation flow for solar output and device health across sensor-driven data paths.</li>
+          <li>Tested threshold alerts and data capture behavior to improve trust in telemetry accuracy and fault detection.</li>
+        </ul>
+      </article>
 
-<section id="projects">
-<h3>Projects</h3>
+      <article class="entry">
+        <h3>Voice-Controlled Smart Home Automation System</h3>
+        <ul>
+          <li>Engineered voice-command control workflows for connected devices with emphasis on robust command handling.</li>
+          <li>Validated integration and fallback scenarios to reduce command failures and improve overall control reliability.</li>
+        </ul>
+      </article>
+    </section>
 
-<div class="project">
-<h4>Quiz Master V2</h4>
-<ul>
-<li>Built Flask + Vue.js RBAC system with REST APIs and Celery.</li>
-<li>Validated API flows, database integrity, and async workflows.</li>
-</ul>
-</div>
+    <section id="education" class="panel">
+      <h2>Education</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>MS Computer Engineering</h3>
+          <p class="muted">University of Houston-Clear Lake</p>
+        </article>
+        <article class="card">
+          <h3>Diploma in Data Science and Applications</h3>
+          <p class="muted">IIT Madras</p>
+        </article>
+        <article class="card">
+          <h3>B.Tech Electrical and Electronics Engineering</h3>
+          <p class="muted">VBIT</p>
+        </article>
+      </div>
+    </section>
 
-<div class="project">
-<h4>QA Automation Framework</h4>
-<ul>
-<li>Implemented Selenium + Cucumber framework for regression.</li>
-<li>Integrated with Azure DevOps CI/CD pipelines.</li>
-</ul>
-</div>
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <p>Email: <a class="contact-link" href="mailto:goutam.krapa11@gmail.com">goutam.krapa11@gmail.com</a></p>
+      <p>LinkedIn: <a class="contact-link" href="https://www.linkedin.com/in/krapagoutam">linkedin.com/in/krapagoutam</a></p>
 
-</section>
+      <div class="btn-row">
+        <a class="btn primary" href="mailto:goutam.krapa11@gmail.com">Get in Touch</a>
+        <!-- Resume PDFs must exist at these relative paths for download buttons to work. -->
+        <a class="btn secondary" href="assets/Goutam_Krapa_Resume.pdf" download>Download Resume</a>
+        <a class="btn secondary" href="assets/Goutam_Krapa_ATS_Resume.pdf" download>ATS Resume PDF</a>
+      </div>
+    </section>
+  </main>
 
-<section id="contact">
-<h3>Contact</h3>
-
-<p>Open to QA Engineer, Automation Engineer, System Engineer roles.</p>
-
-<div class="resume-actions">
-<a class="button" href="mailto:goutam.krapa11@gmail.com">Contact Me</a>
-<a class="button secondary" href="assets/Goutam_Krapa_Resume.pdf" download>Download Resume</a>
-<a class="button secondary" href="assets/Goutam_Krapa_ATS_Resume.pdf" download>ATS Resume</a>
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Goutam Krapa</p>
-</footer>
-
-<script>
-if (!SHOW_TIMELINE) {
-  document.querySelectorAll(".timeline").forEach(e => e.style.display = "none");
-}
-</script>
-
+  <footer>
+    <div class="container">© 2026 Goutam Krapa</div>
+  </footer>
 </body>
 </html>
